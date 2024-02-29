@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body, html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: 65%;
+  background-color: rgb(16, 34, 46);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: white;
+  padding: 2vh 9%;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+header #toggler {
+  display: none;
+}
+header .fa-bars {
+  font-size: 3.5rem;
+  color: #333;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+  display: none;
+}
+header .logo {
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(16, 34, 46);
+}
+header .logo img {
+  border-radius: 50%;
+  width: 14vh;
+  margin-right: 1rem;
+}
+header .navbar {
+  left: -100%;
+}
+header .navbar a {
+  font-size: 2rem;
+  padding: 1rem 2.5rem;
+  color: #666;
+  transition: 0.5s ease-in-out;
+}
+header .navbar a:hover {
+  color: rgb(0, 29, 107);
+  font-size: 2.5rem;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  color: #eee;
+}
+.home .content {
+  margin-top: 15%;
+  max-height: 100px;
+  max-width: 60rem;
+  font-size: 2rem;
+}
+.home .content h3 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.home .content span {
+  font-size: 3rem;
+}
+
+.icons-container {
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  font-size: 2rem;
+}
+.icons-container .icons {
+  background: #fff;
+  border: 1rem solid rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex: 1 1 25rem;
+}
+.icons-container .icons i {
+  font-size: 5rem;
+  margin-right: 2rem;
+  margin-top: auto;
+}
+.icons-container .icons span {
+  color: #999;
+  font-size: 1.6rem;
+}
+
+.products .heading {
+  font-size: 5rem;
+  text-align: center;
+  color: #eee;
+}
+.products .heading span {
+  color: rgb(0, 102, 170);
+}
+.products .box-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.products .box-container .box {
+  flex: 1 1 30rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-color: rgb(0, 51, 61);
+}
+.products .box-container .box .discount {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.7rem 1rem;
+  font-size: 2rem;
+  color: white;
+  background-color: rgb(175, 14, 14);
+  z-index: 1;
+  border-radius: 0.5rem;
+}
+.products .box-container .box img {
+  margin-top: 2rem;
+  height: 40rem;
+  filter: contrast(110%);
+}
+.products .box-container .box img:hover {
+  transform: scale(1.04);
+  transition: all 0.5s;
+}
+.products .box-container .box .content {
+  color: white;
+}
+.products .box-container .box .content h3 {
+  font-size: 2rem;
+}
+.products .box-container .box .content .price {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  background-color: #fff;
+}
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.footer .box-container .box {
+  flex: 1 1 25rem;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+}
+.footer .box-container .box h3 {
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+.footer .box-container .box a {
+  display: block;
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #000;
+}
+.footer .box-container .box a i {
+  padding: 0 1rem;
+}
+.footer .box-container .box a:hover {
+  color: rgb(0, 102, 170);
+  text-decoration: underline;
+  transition: 0.5s;
+}
+
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  header {
+    padding: 1.5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: rgb(16, 34, 46);
+  }
+  html {
+    font-size: 65%;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    padding: 2rem;
+  }
+  header .logo {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  header .logo img {
+    width: 10vh;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    background-color: transparent;
+  }
+  header .navbar a {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background-color: #eee;
+    border-radius: 30px;
+    display: block;
+    text-align: center;
+  }
+  header #toggler:checked ~ .navbar {
+    width: 100%;
+    left: 0;
+    transition: all 0.5s linear;
+  }
+  header .fa-bars {
+    display: block;
+  }
+  .home {
+    display: flex;
+    margin: 30rem auto;
+  }
+  .home .content {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 1110px) {
+  html {
+    font-size: 55%;
+  }
+  header {
+    padding: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
